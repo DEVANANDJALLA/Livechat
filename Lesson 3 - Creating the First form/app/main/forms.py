@@ -1,10 +1,10 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms.fields import StringField, SubmitField
 from wtforms.validators import Required
 
 
-class LoginForm(Form):
+class LoginForm(FlaskForm):
     """Accepts email and password for verification"""
-    email = StringField('email', validators=[Required()])
+    email = StringField('Email', validators=[Required()])
     password = StringField('Password', validators=[Required()])
-    submit = SubmitField('Enter Chatroom')
+    submit = SubmitField('Submit')
