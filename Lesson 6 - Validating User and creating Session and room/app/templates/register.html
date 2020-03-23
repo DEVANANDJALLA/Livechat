@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Flask Live chat </title>
+    </head>
+    <body>
+        <h1>Register Here</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.email.label }}: {{ form.email() }} {% for error in form.email.errors %}{{ error }}{% endfor %}<br>
+            {{ form.password.label }}: {{ form.password() }} {% for error in form.password.errors %}{{ error }}{% endfor %}<br>
+            {{ form.confirm.label }}: {{ form.confirm() }} {% for error in form.confirm.errors %}{{ error }}{% endfor %}<br>
+            {{ form.submit() }}
+        </form>
+        </form>
+    </body>
+</html>
